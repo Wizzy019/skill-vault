@@ -7,6 +7,6 @@
 .active{
     @apply font-bold
 }
-.maim{
-    @apply m-10 p-10 rounded-2xl
+.main{
+    @apply p-5 rounded-2xl
 }
