@@ -10,3 +10,21 @@
 .main{
     @apply p-5 rounded-2xl
 }
+.dashboard-card{
+    @apply rounded-2xl h-30 p-4 shadow-md
+}
+.dashboard-card-text{
+    @apply text-gray-600
+}
+.dashboard-card-number{
+    @apply text-4xl font-semibold
+}
+.goalForm{
+    @apply w-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+    transition-all ease-in-out duration-700
+     bg-gray-100 p-5 border-2 border-black rounded-2xl text-2xl font-medium 
+    flex flex-col items-center justify-evenly 
+}
+.goal{
+    @apply text-pretty text-2xl font-semibold grid grid-cols-4 items-center justify-around
+}

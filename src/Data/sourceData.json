@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Exercise",
+        "value": 30
+    },
+     {
+        "label": "Read",
+        "value": 20
+    },
+     {
+        "label": "Learn React",
+        "value": 50
+    }
+]

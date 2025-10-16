@@ -11,7 +11,7 @@ import Profile from './pages/Profile'
 
 function App() {
   return (
-    <div className='h-screen w-full relative m-0 p-0 box-border'>
+    <div className='h-screen w-full relative m-0 p-0 box-border text-pretty'>
       <Navbar />
       <Routes>
          <Route path="/" element={<Dashboard/>} />
