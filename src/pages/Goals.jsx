@@ -54,6 +54,17 @@ function Goals() {
     setGoals((prev) => prev.filter((goal) => goal.id !== id))
   }
 
+  // const [achieved, setAchieved] = useState(false);
+
+  // const markProg = () => {
+  //   setAchieved(!achieved)
+  // }
+
+  const setAchieved = (id) => {
+    setGoals((prev) =>
+    prev.map((goal) => goal.id === id ? {...goal, achieved: !goal.achieved} : goal))
+  }
+
   useEffect(() => {
     localStorage.setItem("goals", JSON.stringify(goals))
   }, [goals])
@@ -82,35 +93,41 @@ function Goals() {
         >
           Add Goal</button>
       </form>}
-      <ul className='flex flex-col w-full text-pretty justify-center max-h-96 overflow-auto'>
+      <ul className='flex flex-col w-full text-pretty max-h-96 overflow-y-scroll'>
         {goals.map((g) => (
-          <li key={g.id} className='goal text-lg font-semibold p-4'>
+          <li key={g.id} className='goal'>
             {editingId === g.id ? (
               <>
               <input
               value={editingText}
-              className='w-auto'
+              className='min-w-40'
               onChange={(e) => setEditingText(e.target.value)}
               />
               <button onClick={() => saveEdit(g.id)}
-                className='col-start-3'
-                >Save</button>
-              <button onClick={() => setEditingId(null)}>Cancel</button>
+                className=''
+                >📑</button>
+              <button onClick={() => setEditingId(null)}>✖</button>
               </>
             ) : (
               <>
-               <span>{g.text}</span>
+               <input type="checkbox"
+               checked={g.achieved}
+               onChange={() => setAchieved(g.id)}
+               className='size-7'
+               />            
+                <span>{g.text}</span>
                <button onClick={() => startEditing(g.id, g.text)}
-               className='col-start-3'
-                >📝</button>
+               className='ml-auto'
+
+                >✏</button>
               <button
             type='button'
             onClick={() => deleteGoal(g.id)}
-            className='col-start-4'
+            className=''
             >
               🚮
             </button>
-              </>
+               </>
             )}
           </li>
         ))}

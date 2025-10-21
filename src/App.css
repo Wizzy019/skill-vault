@@ -26,5 +26,5 @@
     flex flex-col items-center justify-evenly 
 }
 .goal{
-    @apply text-pretty text-2xl font-semibold grid grid-cols-4 items-center justify-around
+    @apply text-pretty text-2xl font-semibold flex justify-between p-4
 }
