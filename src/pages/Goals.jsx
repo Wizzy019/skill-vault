@@ -54,12 +54,6 @@ function Goals() {
     setGoals((prev) => prev.filter((goal) => goal.id !== id))
   }
 
-  // const [achieved, setAchieved] = useState(false);
-
-  // const markProg = () => {
-  //   setAchieved(!achieved)
-  // }
-
   const setAchieved = (id) => {
     setGoals((prev) =>
     prev.map((goal) => goal.id === id ? {...goal, achieved: !goal.achieved} : goal))
@@ -113,7 +107,7 @@ function Goals() {
                <input type="checkbox"
                checked={g.achieved}
                onChange={() => setAchieved(g.id)}
-               className='size-7'
+               className='size-7 mx-3.5'
                />            
                 <span>{g.text}</span>
                <button onClick={() => startEditing(g.id, g.text)}

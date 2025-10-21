@@ -49,7 +49,7 @@ function Dashboard() {
         />
       </div>
     </div>
-    <Goals />
+    <Goals/>
     </div>
     
   )
