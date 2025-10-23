@@ -51,7 +51,7 @@ function Projects() {
   return (
     <>
     <h1 className='text-3xl font-semibold mx-2 text-center'>Projects</h1>
-     <div className=' flex flex-1 items-center justify-start gap-1 m-2 p-1'>
+     <div className=' flex flex-1 items-center justify-center md:justify-start gap-1 m-2 p-1'>
      {categories.map((category) => (
       <button
       key={category}
@@ -66,7 +66,7 @@ function Projects() {
       </button>
      ))}
      </div>
-     <div className='grid grid-cols-1 auto-cols-fr place-items-center m-1.5 md:grid-cols-4'>
+     <div className='grid grid-cols-1 auto-cols-fr place-items-center gap-4 m-1.5 md:grid-cols-4'>
       {filteredProjects.map((project) => (
          <ProjectCard key={project.name} {...project}/>
       ))}

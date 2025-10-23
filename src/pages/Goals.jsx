@@ -67,7 +67,7 @@ function Goals() {
 
  
  return (
-    <div className=' flex flex-col bg-[#fffefec2] m-5 mt-4 p-4 shadow-lg rounded-sm'>
+    <div className=' flex flex-col max-h-96 bg-[#fffefec2] m-5 mt-4 p-4 shadow-lg rounded-sm'>
       <h1 className='text-3xl font-semibold'>Goals</h1>
       {showForm && <form action=""
       onSubmit={handleSubmit}
@@ -105,6 +105,7 @@ function Goals() {
             ) : (
               <>
                <input type="checkbox"
+               id='checkbox'
                checked={g.achieved}
                onChange={() => setAchieved(g.id)}
                className='size-7 mx-3.5'

@@ -20,7 +20,7 @@
     @apply text-4xl font-semibold 
 }
 .goalForm{
-    @apply w-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+    @apply w-80 absolute top-96 left-1/2 transform -translate-x-1/2 -translate-y-52
     transition-all ease-in-out duration-700
      bg-gray-100 p-5 border-2 border-black rounded-2xl text-2xl font-medium 
     flex flex-col items-center justify-evenly 
