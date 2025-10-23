@@ -8,16 +8,16 @@
     @apply font-bold
 }
 .main{
-    @apply p-5 rounded-2xl
+    @apply p-5 rounded-2xl  bg-[#fffefeb4]
 }
 .dashboard-card{
-    @apply rounded-2xl h-30 p-4 shadow-md
+    @apply rounded-2xl h-30 p-4 shadow-md  bg-[#fffefed7]
 }
 .dashboard-card-text{
     @apply text-gray-600
 }
 .dashboard-card-number{
-    @apply text-4xl font-semibold
+    @apply text-4xl font-semibold 
 }
 .goalForm{
     @apply w-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
