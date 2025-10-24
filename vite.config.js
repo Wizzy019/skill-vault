@@ -12,6 +12,6 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tailwindcss()],
-    base: isVercel || mode === 'development' ? '/' : '/skill-vault/',
+    base: isVercel || mode === 'development' ? '/' : './',
   }
 })
