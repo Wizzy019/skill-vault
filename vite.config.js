@@ -10,8 +10,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const isVercel = env.VERCEL === '1'
 
-  return{
+  return {
     plugins: [react(), tailwindcss()],
-    base: isVercel ? '/' : '/skill-vault/',
+    base: isVercel || mode === 'development' ? '/' : '/skill-vault/',
   }
 })

@@ -13,7 +13,7 @@ function Navbar() {
             </div>
             <div className='w-full p-1.5 md:w-1/2 md:justify-self-center'>
                 <ul className='w-full flex flex-1 items-center justify-between p-2 md:flex-2 md:justify-evenly'>
-                    <li><NavLink to="/" className={({ isActive }) => isActive? 'nav-link active': 'nav-link'}>Dashboard</NavLink></li>
+                    <li><NavLink to="/" >Dashboard</NavLink></li>
                     <li><NavLink to="/goals">Goals</NavLink></li>
                     <li><NavLink to="/projects">Projects</NavLink></li>
                     <li><NavLink to="/profile">Profile</NavLink></li>
